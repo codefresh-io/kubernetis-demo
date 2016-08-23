@@ -1,0 +1,22 @@
+version: "1.0"
+  steps:
+    unit-tests:
+    image: verchol/node-tools:all
+    fail-fast: false
+    working-directory : ${{initial-clone}}
+    commands:
+      - echo not supported yet
+      - npm install
+      - npm test
+    build-image:
+      type: "build"
+      fail-fast: false
+      dockerfile: "Dockerfile"
+      image-name: "verchol/demochat-hpe"
+      tag: "latest"
+
+    push-aut-to-docker-hub:
+      type: push
+      candidate: ${{aut-build-step}}
+      tag: latest
+      fail-fast: false
