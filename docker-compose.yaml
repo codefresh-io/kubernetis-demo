@@ -1,0 +1,9 @@
+version : '2'
+services:
+    mongo:
+      image: mongo
+      labels:
+        - "io.codefresh.owner=codefresh"
+      environment:
+        NODE_ENV: development-docker
+   
