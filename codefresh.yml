@@ -1,4 +1,5 @@
-ֿversion: "1.0"
+# codefresh CI flowֿ
+version: "1.0"
 steps:
     unit-tests:
       image: verchol/node-tools:all
