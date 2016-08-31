@@ -20,3 +20,8 @@ steps:
       candidate: ${{aut-build-step}}
       tag: latest
       fail-fast: false
+
+    deploy :
+      image : verchol/kubernetes:latest
+      commands :
+      - kubectl get pods
